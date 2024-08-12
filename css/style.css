@@ -1,0 +1,725 @@
+@charset "utf-8";
+
+body {
+	letter-spacing: 2;
+	color: #333;
+	background-image: url(/キャンプ村/img/background.jpg);
+	background-color: rgb(255, 255, 255,0.7);
+	background-blend-mode: lighten;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+  text-decoration: none;
+	cursor: pointer;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+.section-title{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 60px;
+	text-align: center;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.section-title::before,
+.section-title::after{
+	content: "";
+	border-top: 3px solid;
+	width: 28%;
+}
+
+.wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+header {
+	height: 80px;
+	background-color: #207702;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header img {
+  max-width: 500px;
+	height: 80px;
+	object-fit: cover;
+	vertical-align: bottom;
+}
+
+.nav-menu {
+  display: flex;
+	justify-content: center;
+}
+
+.nav-menu a {
+	color: #fff;
+	font-size: 25px;
+	margin-right: 50px;
+}
+
+.nav-menu .btn {
+	border: 2px solid black;
+	border-radius: 100%;
+	padding: 10px;
+}
+
+header .hamburger {
+	display: none;
+}
+
+/* メインビジュアル */
+
+.mainvisual {
+	height: calc(100vh - 100px);
+	position: relative;
+	margin-bottom: 50px;
+}
+
+.mainvisual .fade li {
+	/* width: 100%; */
+	position: absolute;
+  top: 0;
+	right: 0;
+	opacity: 0;
+	animation: fade 15s infinite;
+}
+
+.mainvisual .fade li:nth-child(1){
+	animation-delay: 0s;
+}
+
+.mainvisual .fade li:nth-child(2){
+	animation-delay: 5s;
+}
+
+.mainvisual .fade li:nth-child(3){
+	animation-delay: 10s;
+}
+
+.mainvisual .fade li img{
+	/* width: 1500px; */
+	width: 100vw;
+	height: calc(100vh - 100px);
+	object-fit: cover;
+}
+
+.mainvisual .fade li::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+@keyframes fade{
+	0% {
+		opacity: 0;
+	}
+
+	15% {
+		opacity: 1;
+	}
+
+  30% {
+		opacity: 1;
+	}
+
+	45% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+/* キャンプ村の４つの特徴 */
+
+.feature img {
+	border-radius: 50%;
+	width: 100%;
+	max-width: 250px;
+	height: 250px;
+	object-fit: cover;
+}
+
+.feature .menu {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 100px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.feature .text-title {
+	margin: 20px 0;
+	font-size: 20px;
+}
+
+.feature p {
+	font-size: 10px;
+}
+
+
+/* キャンプをもっと楽しむ */
+.enjoy {
+	margin-bottom: 50px;
+}
+
+.enjoy img {
+	width: 400px;
+	height: 200px;
+	object-fit: cover;
+}
+
+.bobfire{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	align-items: center;
+}
+
+.bobfire img{
+	width: 50%;
+	object-fit: cover;
+}
+
+.bobfire-text{
+	width: 50%;
+	text-align: left;
+	text-align: center;
+}
+
+.bobfire-text h3{
+	text-align: center;
+	padding-bottom: 40px;
+	font-size: 20px;
+}
+
+.bobfire-text p{
+	font-size: 14px;
+	padding-bottom: 40px;
+}
+
+.starry-sky{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	align-items: center;
+}
+
+.starry-sky img{
+	width: 50%;
+	object-fit: cover;
+}
+
+.starry-sky-text{
+	width: 50%;
+	text-align: left;
+	text-align: center;
+}
+
+.starry-sky-text h3{
+	text-align: center;
+	padding-bottom: 40px;
+	font-size: 20px;
+}
+
+.starry-sky-text p{
+	font-size: 14px;
+	padding-bottom: 40px;
+}
+
+.cycling{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	align-items: center;
+}
+
+.cycling img{
+	width: 50%;
+	object-fit: cover;
+}
+
+.cycling-text{
+	width: 50%;
+	text-align: left;
+	text-align: center;
+}
+
+.cycling-text h3{
+	text-align: center;
+	padding-bottom: 40px;
+	font-size: 20px;
+}
+
+.cycling-text p{
+	font-size: 14px;
+	padding-bottom: 40px;
+}
+
+/* アニメーション */
+.balloon{
+	animation: balloon 1s ease-out 0s 1 forwards;
+}
+
+@keyframes balloon{
+	0%{
+		transform: scale(0.1);
+		opacity: 0;
+	}
+
+	100%{
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+/* 最新情報 */
+.news .item {
+	display: flex;
+  justify-content: flex-start;
+}
+
+.news .item dl,dt {
+	padding-right: 450px;
+
+}
+
+.news .item dl,dt,dd {
+	border-bottom: 1px solid #777;
+	line-height: 2;
+	margin-bottom: 30px;
+}
+
+.news .item dl {
+	border-bottom: none;
+}
+
+.news-btn {
+	display: flex;
+	justify-content: center;
+}
+
+.news a {
+  display: inline-block;
+	margin-bottom: 50px;
+	border: 2px solid black;
+	color: #333;
+	padding: 10px;
+	border-radius: 50%;
+}
+
+.news a:hover {
+	background-color: #207702;
+	color: #fff;
+	border: 2px solid black;
+}
+
+/* アクセス */
+.access {
+	margin-bottom: 100px;
+}
+
+.access-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.map iframe {
+	width: 100%;
+  max-width: 500px;
+	height: 400px;
+}
+
+.address {
+	font-size: 20px;
+  line-height: 2;
+	margin-right: 100px;
+}
+
+.access a {
+	color: #207702;
+}
+
+/* よくあるご質問 */
+/* question全体 */
+.question{
+	list-style: none;
+	width: 100%;
+	max-width: 900px;
+	margin:0 auto;
+	margin-bottom: 50px;
+}
+
+.question li{
+	margin: 10px 0;
+}
+
+.question section {
+border: 1px solid #ccc;
+}
+
+/* 質問タイトル */
+.question-title {
+	position: relative;
+	cursor: pointer;
+	font-size:1rem;
+	font-weight: normal;
+	padding: 3% 3% 3% 50px;
+	transition: all .5s ease;
+}
+
+/*アイコンの＋と×*/
+.question-title::before,
+.question-title::after{
+	position: absolute;
+	content:'';
+	width: 15px;
+	height: 2px;
+	background-color: #333;
+	
+}
+.question-title::before{
+	top:48%;
+	left: 15px;
+	transform: rotate(0deg);
+	
+}
+.question-title::after{    
+	top:48%;
+	left: 15px;
+	transform: rotate(90deg);
+
+}
+
+.question-title.close::before{
+transform: rotate(45deg);
+}
+
+.question-title.close::after{
+transform: rotate(-45deg);
+}
+
+.box {
+	display: none;
+	background: #f3f3f3;
+margin:0 3% 3% 3%;
+	padding: 3%;
+}
+
+footer {
+	height: 200px;
+	background-color: #207702;
+	align-items: center;
+	padding: 30px 100px 0 100px;
+}
+
+.footer-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer .footer-logo img{
+  max-width: 300px;
+	height: 100px;
+	object-fit: cover;
+}
+
+footer .footer-social ul {
+  display: flex;
+}
+
+footer .footer-social ul li {
+	margin-left: 50px;
+}
+
+footer .footer-social img{
+  max-width: 50px;
+}
+
+.page-top {
+	position: fixed;
+	right: 10px;
+	bottom:30px;
+	z-index: 2;
+	/* opacity: 0; */
+	transform: translateY(150px);
+}
+
+/*　上に上がる動き　*/
+.page-top.UpMove{
+	animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime{
+  from {
+    opacity: 0;
+	transform: translateY(150px);
+  }
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+.page-top.DownMove{
+	animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime{
+  from {
+  opacity: 1;
+	transform: translateY(0);
+  }
+  to {
+  opacity: 1;
+	transform: translateY(150px);
+  }
+}
+
+/*画像の切り替えと動き*/
+.page-top a {
+    /*aタグの形状*/
+	display: block;
+	width: 100px;
+	color: #333;
+	text-align: center;
+	text-transform: uppercase; 
+	text-decoration: none;
+	font-size:0.6rem;
+}
+
+.page-top.floatAnime a{
+	width: 100px;
+	height: 130px;
+}
+
+@keyframes floatAnime {
+  0% { transform: translateX(0); opacity: 0; }
+  25% { transform: translateX(-6px);opacity: 1; }
+  50% { transform: translateX(0) }
+  100% { transform: translateX(6px);opacity: 1; }
+}
+
+.page-top span{
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+	color: red;
+}
+
+footer p.copyright {
+	text-align: center;
+	margin-top: 40px;
+	font-size: 16px;
+}
+
+@media (max-width: 768px) {
+	
+	/* ハンバーガーメニュー */
+	header .hamburger {
+		display: block;
+		position: relative;
+	}
+	
+	.hamburger{
+		width: 100px;
+		height: 80px;
+		background-color: gray;
+		top: 0;
+		right: 0;
+		z-index: 30;
+		cursor: pointer;
+		transition: 0.3s;
+	}
+	
+	.hamburger:hover{
+		opacity: 0.5;
+	}
+	
+	.hamburger span{
+		width: 50%;
+		height: 2px;
+		background-color: #fff;
+		position: absolute;
+		left: 25%;
+		transition: 0.3s;
+	}
+	
+	.hamburger span:nth-child(1){
+		top: 36%;
+	}
+	
+	.hamburger span:nth-child(2){
+		top: 50%;
+	}
+	
+	.hamburger span:nth-child(3){
+		top: 64%;
+	}
+	
+	.open .hamburger span:nth-child(1){
+		top: 47%;
+		background: #fff;
+		transform: rotate(-45deg);
+	}
+	
+	.open .hamburger span:nth-child(2),
+	.open .hamburger span:nth-child(3){
+		top: 47%;
+		background: #fff;
+		transform: rotate(45deg);
+	}
+
+	.navi{
+		width: 100%;
+		height: 100vh;
+		background-color: #fff;
+		color: #207702;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 20;
+		text-align: center;
+		transition: all 0.6s ease;
+		visibility: hidden;
+		opacity: 0;
+		background-image: url(/キャンプ村/img/background.jpg);
+		background-color: rgb(255, 255, 255,0.7);
+		background-blend-mode: lighten;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+	.open .navi{
+		opacity: 1;
+		visibility: visible;
+	} 
+	
+	.navi .nav-menu{
+		margin: 80px 0 40px;
+		flex-direction: column;
+		line-height: 3;
+	}
+	
+	.navi .nav-menu li{
+		margin-bottom: 20px;
+	}
+	
+	.navi .nav-menu a{
+		color: #207702;
+		font-weight: bold;
+	}
+	
+	/* 特徴 */
+	.feature .menu{
+		grid-template-columns: 1fr;
+	}
+
+	/* 楽しむ */
+	.bobfire{
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+	}
+
+	.bobfire h3 {
+		margin-top: 20px;
+	}
+
+	.starry-sky{
+		flex-direction: column-reverse;
+		width: 100%;
+		align-items: center;
+	}
+
+	.starry-sky h3 {
+		margin-top: 20px;
+	}
+
+	.cycling{
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+	}
+	
+	.cycling h3 {
+		margin-top: 20px;
+	}
+
+	.cycling-text p{
+		padding-bottom: 0;
+	}
+
+	/* 最新情報 */
+	.news-list {
+		text-align: center;
+	}
+
+  .news .item {
+		display: inline-block;
+	}
+
+	.news .item dl,dt {
+		padding-right: 0;
+		display: inline-block;
+	}
+	
+		/* アクセス */
+	.access-container {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.address {
+		margin-top: 20px;
+		margin-right: 0;
+	}
+
+
+	footer {
+		flex-direction: column;
+	}
+	
+	footer img {
+		max-width: 100px;
+
+	}
+
+	footer .footer-container {
+  flex-direction: column;
+	}
+
+	footer .footer-social ul li {
+		margin-left: 10px;
+	}
+
+	footer .footer-social img {
+		max-width: 20px;
+		margin-top: 20px;
+	}
+
+	footer p.copyright {
+		margin-top: 20px;
+		font-size: 10px;
+	}
+}
