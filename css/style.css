@@ -3,7 +3,7 @@
 body {
 	letter-spacing: 2;
 	color: #333;
-	background-image: url(/../img/background.jpg);
+	background-image: url(../img/background.jpg);
 	background-color: rgb(255, 255, 255,0.7);
 	background-blend-mode: lighten;
 	background-repeat: no-repeat;
